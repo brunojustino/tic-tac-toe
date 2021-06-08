@@ -1,0 +1,168 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: rgb(223, 254, 255);
+    font-family: 'Roboto Mono', monospace;
+}
+
+.flex-container{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    align-content: center;
+    height: 100vh;
+}
+
+header{
+    flex: 1 1 15vh;
+    border-bottom: 1px solid rgba(29, 28, 28, 0.219);
+    width: 100vw;
+    justify-self: center;
+    align-self: center;
+    text-align: center;
+    /* background: rgba(0, 0, 0, 0.05); */
+    font-size: 3em;
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    align-items: center;
+
+    background-color:#E0F2F1;
+    padding:10px;
+    border-radius:1px;
+    box-shadow: 10px 10px 20px 0px rgba(0,0,0,0.75);
+}
+
+.game{
+    flex: 4 1 55vh;
+    padding-top: 1%;
+}
+
+.result{
+    padding-top: 5%;
+    margin: 0px auto;
+    flex: 2 2 20vh;
+    display: grid;
+    grid-template-columns: 4fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+    justify-content: center;
+    align-content: center;
+    font-size: 1.4em;
+}
+
+footer{
+    flex: 1 1 10vh;
+    padding-top: 5%;
+    font-family: 'Open Sans Condensed', sans-serif;
+    letter-spacing: 1.5px;
+}
+
+.tictactoe{
+    display: grid;
+    height: 50vh;
+    width: 80vw;
+    margin-top: 2%;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+    justify-content: center;
+    align-content: center;
+
+}
+
+.choice{
+    display: flex;
+    position: relative;
+    justify-content: center;
+    align-content: center;
+    align-items: center;
+    cursor: pointer;
+    transition: 0.5s all;
+}
+
+.choice:hover{
+    transition: all 0.3s cubic-bezier(.55,.06,.68,.19);
+    background-color: rgb(199, 233, 234);
+
+}
+
+.choice:active{
+    padding: 10%;
+}
+.border-right{
+    border-right: 3px solid rgb(87, 85, 85);
+}
+
+.border-bottom{
+    border-bottom: 3px solid rgb(87, 85, 85);
+}
+
+.x{
+    font-size: 5em;
+}
+
+.rainbow {
+  
+    /* Font options */
+   font-family: 'Pacifico', cursive;
+   text-shadow: 2px 2px 4px #000000;
+   font-size:40px;
+   
+    /* Chrome, Safari, Opera */
+   -webkit-animation: rainbow 5s infinite; 
+   
+   /* Internet Explorer */
+   -ms-animation: rainbow 5s infinite;
+   
+   /* Standar Syntax */
+   animation: rainbow 5s infinite; 
+ }
+ 
+ /* Chrome, Safari, Opera */
+ @-webkit-keyframes rainbow{
+   0%{color: orange;}	
+   10%{color: purple;}	
+     20%{color: red;}
+   30%{color: CadetBlue;}
+     40%{color: yellow;}
+   50%{color: coral;}
+     60%{color: green;}
+   70%{color: cyan;}
+   80%{color: DeepPink;}
+   90%{color: DodgerBlue;}
+     100%{color: orange;}
+ }
+ 
+ /* Internet Explorer */
+ @-ms-keyframes rainbow{
+    0%{color: orange;}	
+   10%{color: purple;}	
+     20%{color: red;}
+   30%{color: CadetBlue;}
+     40%{color: yellow;}
+   50%{color: coral;}
+     60%{color: green;}
+   70%{color: cyan;}
+   80%{color: DeepPink;}
+   90%{color: DodgerBlue;}
+     100%{color: orange;}
+ }
+ 
+ /* Standar Syntax */
+ @keyframes rainbow{
+     0%{color: orange;}	
+   10%{color: purple;}	
+     20%{color: red;}
+   30%{color: CadetBlue;}
+     40%{color: yellow;}
+   50%{color: coral;}
+     60%{color: green;}
+   70%{color: cyan;}
+   80%{color: DeepPink;}
+   90%{color: DodgerBlue;}
+     100%{color: orange;}
+ }
