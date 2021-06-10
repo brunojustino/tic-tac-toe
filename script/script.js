@@ -7,6 +7,7 @@ let gameArr = []
 let lastPlayed = ""
 let p1Points = 0
 let p2Points = 0
+let clicks = 0
 
 let squareList = [...square]
 
@@ -23,9 +24,18 @@ squareList.forEach((s) => {
         else if(s.id == "c0"){ clicked(s)}
         else if(s.id == "c1"){ clicked(s)}
         else if(s.id == "c2"){ clicked(s)}
+
         let result = isWinner()
-        if(result) console.log("winnn")
-    })
+
+        if(clicks > 4 && clicks < 9){
+            if(result) {
+                console.log("winner")
+            }
+        } else if(clicks == 9){
+            console.log("tie")
+        }
+        
+    }) // square click event listener end
 })
 
 function clicked(s){
@@ -36,11 +46,13 @@ function clicked(s){
                 lastPlayed = "p1"
                 addSquare(s, "X")
                 playerPlay(lastPlayed, s.id)
+                clicks++
             } else{
                 s.dataset.player = "o"
                 lastPlayed = "p2"
                 addSquare(s, "O")
                 playerPlay(lastPlayed, s.id)
+                clicks++
             }
         }        
 }
