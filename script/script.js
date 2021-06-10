@@ -23,6 +23,8 @@ squareList.forEach((s) => {
         else if(s.id == "c0"){ clicked(s)}
         else if(s.id == "c1"){ clicked(s)}
         else if(s.id == "c2"){ clicked(s)}
+        let result = isWinner()
+        if(result) console.log("winnn")
     })
 })
 
@@ -34,13 +36,11 @@ function clicked(s){
                 lastPlayed = "p1"
                 addSquare(s, "X")
                 playerPlay(lastPlayed, s.id)
-                clicks++
             } else{
                 s.dataset.player = "o"
                 lastPlayed = "p2"
                 addSquare(s, "O")
                 playerPlay(lastPlayed, s.id)
-                clicks++
             }
         }        
 }
