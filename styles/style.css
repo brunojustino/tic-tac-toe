@@ -166,3 +166,9 @@ footer{
    90%{color: DodgerBlue;}
      100%{color: orange;}
  }
+
+.points{
+  font-weight: 600;
+  margin-left: 12px;
+  color: green;
+}
