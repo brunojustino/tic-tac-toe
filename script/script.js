@@ -1,6 +1,3 @@
-console.log("hi")
-
-
 const dom = ( () => {
     let square = document.querySelectorAll(".choice")
     let optionSpan = document.getElementsByClassName("x")
@@ -22,7 +19,6 @@ const dom = ( () => {
     }
     
     squareList.forEach((s) => {
-        console.log(s)
         s.addEventListener("click", () => {
             // console.log(s.id)
             if(s.id == "a0"){ clicked(s)}
@@ -124,7 +120,6 @@ const dom = ( () => {
         }
     }
     
-
     return {
         getSquares,
         addSquare,
@@ -132,19 +127,8 @@ const dom = ( () => {
         reset
     }
 
-
 })()
        
-
-// const player = ( () => {
-//     function play(player, field){
-//         gameArr.push({player: player, field: field})
-//     }
-//     return{
-//         play
-//     }
-// })()  
-
 const game = ( () => {
     let winner = ""
     let square = dom.getSquares()
